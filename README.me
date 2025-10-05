@@ -1,0 +1,118 @@
+🚀 Simplified Binance Futures Trading Bot (Testnet)
+
+A Python-based crypto trading bot that interacts with the Binance Futures Testnet API to place, query, and cancel orders.
+Includes a Streamlit dashboard to visualize balances, open positions, and order history in real time.
+
+📌 Features
+
+🟢 Place Market / Limit / Stop-Limit Orders
+
+⚙️ View Account Balance & Open Positions
+
+📈 Live Order History
+
+💾 Logging of all API requests/responses
+
+❗ Error Handling & Validation
+
+🖥️ Streamlit Dashboard UI
+
+🔐 Works on Binance Futures Testnet (safe for experimentation)
+
+🧠 Tech Stack
+
+Python 3.9+
+
+Requests (REST API calls)
+
+Streamlit (Dashboard UI)
+
+Logging
+
+argparse (CLI interface)
+
+⚙️ Setup Instructions
+1️⃣ Clone or Download the Project
+git clone https://github.com/<your-username>/crypto-trading-bot.git
+cd crypto-trading-bot
+
+2️⃣ Create a Virtual Environment (recommended)
+python -m venv venv
+venv\Scripts\activate      # on Windows
+# or
+source venv/bin/activate   # on Mac/Linux
+
+3️⃣ Install Dependencies
+pip install -r requirements.txt
+
+4️⃣ Add Your Binance Testnet API Keys
+
+You can generate them from:
+👉 https://testnet.binancefuture.com
+
+Then either:
+
+Option 1 — Add directly in the script (for quick testing)
+
+Edit:
+
+API_KEY = "your_api_key_here"
+API_SECRET = "your_secret_key_here"
+
+Option 2 — Use environment variables (recommended)
+export BINANCE_API_KEY="your_api_key"
+export BINANCE_API_SECRET="your_secret_key"
+
+5️⃣ Run via Command Line (CLI mode)
+
+Place a Market Buy order:
+
+python basic_bot.py order --api-key your_api_key --api-secret your_api_secret --symbol BTCUSDT --side BUY --type MARKET --quantity 0.01
+
+
+Check order status:
+
+python basic_bot.py query --api-key your_api_key --api-secret your_api_secret --symbol BTCUSDT --order-id 12345678
+
+
+Cancel an order:
+
+python basic_bot.py cancel --api-key your_api_key --api-secret your_api_secret --symbol BTCUSDT --order-id 12345678
+
+6️⃣ Run the Dashboard (UI mode)
+streamlit run bot_dashboard.py
+
+
+Then open the local link shown in your terminal (usually http://localhost:8501
+).
+
+📊 Dashboard Features
+
+Live balance updates
+
+Current open positions
+
+Recent orders and trades
+
+Manual order placement (Market, Limit, Stop-Limit)
+
+🧰 Folder Structure
+crypto-trading-bot/
+│
+├── basic_bot.py          # Core bot logic (REST API handling)
+├── bot_dashboard.py      # Streamlit dashboard UI
+├── basic_bot.log         # Request/response logs
+├── requirements.txt      # Dependencies
+└── README.md             # Project guide
+
+⚠️ Disclaimer
+
+This project is for educational purposes only.
+All API interactions use Binance Testnet, which involves no real funds.
+
+👨‍💻 Author
+
+Sahej Prakash
+📧 Email: [prakash.sahej@gmail.com]
+]
+🌐 GitHub: https://github.com/Sahej200
