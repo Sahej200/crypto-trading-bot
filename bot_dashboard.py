@@ -18,8 +18,9 @@ st.title("💹 Binance Futures Testnet Control Panel")
 # API Credentials (from .streamlit/secrets.toml)
 
 try:
-    API_KEY = st.secrets = "   "
-    API_SECRET = st.secrets ="  " 
+    API_KEY = st.secrets["BINANCE_API_KEY"]
+    API_SECRET = st.secrets["BINANCE_API_SECRET"]
+
 except Exception:
     st.error("❌ Missing API credentials in .streamlit/secrets.toml")
     st.stop()
